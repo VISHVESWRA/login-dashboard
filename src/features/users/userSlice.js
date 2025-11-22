@@ -9,7 +9,9 @@ export const getUserById = createAsyncThunk(
   "users/getUserById",
   async (id, { rejectWithValue }) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/users/${id}`);
+      const res = await axios.get(
+        `https://login-backend-cb8k.onrender.com/api/users/${id}`
+      );
       return res.data;
     } catch (err) {
       return rejectWithValue(
