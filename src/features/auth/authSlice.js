@@ -7,7 +7,7 @@ export const loginUser = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://login-backend-cb8k.onrender.com/api/auth/login",
         data
       );
       localStorage.setItem("token", res.data.token);
@@ -24,7 +24,7 @@ export const registerUser = createAsyncThunk(
   async (formData, { rejectWithValue }) => {
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://login-backend-cb8k.onrender.com/api/auth/register",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

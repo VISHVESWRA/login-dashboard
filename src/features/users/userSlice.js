@@ -2,7 +2,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // Base API URL
-const API_URL = "http://localhost:5000/api/users";
+const API_URL = "https://login-backend-cb8k.onrender.com/api/users";
+// const API_URL = "http://localhost:5000/api/users";
 
 export const getUserById = createAsyncThunk(
   "users/getUserById",
