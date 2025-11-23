@@ -7,6 +7,7 @@ import DashboardLayout from "./pages/dashboard/Layout";
 import NewUser from "./pages/dashboard/NewUser";
 import UserList from "./pages/dashboard/UserList";
 import ProtectedRoute from "./component/ProtectedRoute";
+import TodoList from "./pages/todo/TodoList";
 
 function App() {
   const { token } = useSelector((state) => state.auth);
@@ -41,6 +42,7 @@ function App() {
           <Route path="edit-user/:id" element={<NewUser />} />
 
           <Route path="user-list" element={<UserList />} />
+          <Route path="todo-list" element={<TodoList />} />
         </Route>
       </Routes>
     </>
